@@ -1,12 +1,12 @@
 import axios from "axios";
 import { store } from "../Redux/Store";
 
-class InterceptorService{
-    static interceptor():void{
+class InterceptorService {
+    static interceptor(): void {
         axios.interceptors.request.use((request) => {
             const token = store.getState().auth.token;
-            if(token){
-                request.headers.Authorization = "Bearer" + token;
+            if (token) {
+                request.headers.Authorization = `Bearer ${token}`;
             }
             return request;
         });

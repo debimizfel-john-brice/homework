@@ -4,6 +4,7 @@ import './LogIn.css';
 import { useNavigate } from 'react-router-dom';
 import { CredentialsModel } from '../../Models/UserModel';
 import AuthService from '../../Services/AuthService';
+import NotifyService from '../../Services/NotifyService';
 
 function LogIn(): JSX.Element {
 
@@ -13,11 +14,11 @@ function LogIn(): JSX.Element {
     async function save(credentials: CredentialsModel) {
         try {
             await AuthService.login(credentials);
-            alert("Welcome back!");
+            NotifyService.success("Welcome back!");
             navigation("/home");
 
         } catch (error: any) {
-            alert(error.message);
+            NotifyService.error(error.message);
         }
     }
 

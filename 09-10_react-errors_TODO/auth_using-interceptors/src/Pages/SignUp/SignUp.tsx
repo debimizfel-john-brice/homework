@@ -4,6 +4,7 @@ import './SignUp.css';
 import { useForm } from 'react-hook-form';
 import { UserModel } from '../../Models/UserModel';
 import AuthService from '../../Services/AuthService';
+import NotifyService from '../../Services/NotifyService';
 
 function SignUp(): JSX.Element {
 
@@ -13,11 +14,11 @@ function SignUp(): JSX.Element {
     async function save(user: UserModel) {
         try {
             await AuthService.signup(user);
-            alert("Welcome " + user.firstName);
+            NotifyService.success("Welcome " + user.firstName);
             navigation("/home");
 
         } catch (error: any) {
-            alert(error.message);
+            NotifyService.error(error.message);
         }
     }
 

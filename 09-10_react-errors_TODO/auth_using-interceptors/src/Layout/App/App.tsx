@@ -4,6 +4,8 @@ import Title from '../../Components/Title-Effect/Title';
 import './App.css';
 import Routing from '../../Pages/Routing/Routing';
 import Aside from '../Aside/Aside';
+import { ReactNotifications } from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
 
 function App(): JSX.Element {
     return (
@@ -21,6 +23,7 @@ function App(): JSX.Element {
             <footer>
                 <Footer />
             </footer>
+            <ReactNotifications />
         </div>
     );
 }

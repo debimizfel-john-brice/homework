@@ -4,6 +4,7 @@ import { EmployeeModel } from '../../Models/EmployeeModel';
 import './Employees.css';
 import EmployeesService from '../../Services/EmployeesService';
 import { Link } from 'react-router-dom';
+import NotifyService from '../../Services/NotifyService';
 
 function Employees(): JSX.Element {
 
@@ -12,7 +13,7 @@ function Employees(): JSX.Element {
     useEffect(() => {
         EmployeesService.get_employees()
             .then(e => setEmployees(e))
-            .catch(err => alert(err.message));
+            .catch(err => NotifyService.error(err.message));
     }, [])
 
 

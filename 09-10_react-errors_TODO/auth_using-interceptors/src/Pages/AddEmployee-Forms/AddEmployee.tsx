@@ -6,23 +6,24 @@ import { AddEmployeeModel } from '../../Models/EmployeeModel';
 import EmployeesService from '../../Services/EmployeesService';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import NotifyService from '../../Services/NotifyService';
 
 function AddEmployee(): JSX.Element {
     const { register, handleSubmit, formState } = useForm<AddEmployeeModel>();
     const navigation = useNavigate();
     const [imageUrl, setImageUrl] = useState("");
 
-    useEffect(()=>{
+    useEffect(() => {
         setImageUrl(imageUrl); //?
     });
 
     async function save(employee: AddEmployeeModel) {
         try {
             await EmployeesService.add_employee(employee);
-            alert("Employee added");
+            NotifyService.success("Employee added");
             navigation("/employees");
         } catch (error: any) {
-            alert(error.message);
+            NotifyService.error(error.message);
         }
     }
 

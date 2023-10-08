@@ -6,6 +6,7 @@ import EmployeesService from '../../Services/EmployeesService';
 import { cityValidation, countryValidation, firstNameValidation, lastNameValidation, titleValidation } from '../../FormValidation/EmployeeValidation';
 import Card from '../../Components/Card/Card';
 import { useEffect, useState } from 'react';
+import NotifyService from '../../Services/NotifyService';
 
 function EditEmployee(): JSX.Element {
     const { register, handleSubmit, formState, setValue } = useForm<UpdateEmployeeModel>();
@@ -27,7 +28,7 @@ function EditEmployee(): JSX.Element {
             })
             .catch(
                 error => {
-                    alert(error.message);
+                    NotifyService.error(error.message);
                 }
             );
     });
@@ -35,10 +36,10 @@ function EditEmployee(): JSX.Element {
     async function update(employee: UpdateEmployeeModel) {
         try {
             await EmployeesService.update_employee(employee);
-            alert("Employee updated");
+            NotifyService.success("Employee updated");
             navigation("/employees");
         } catch (error: any) {
-            alert(error.message);
+            NotifyService.error(error.message);
         }
     }
 

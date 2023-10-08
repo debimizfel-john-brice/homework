@@ -3,6 +3,7 @@ import './Details.css';
 import { useEffect, useState } from 'react';
 import EmployeesService from '../../Services/EmployeesService';
 import { EmployeeModel } from '../../Models/EmployeeModel';
+import NotifyService from '../../Services/NotifyService';
 
 function Details(): JSX.Element {
 
@@ -12,7 +13,7 @@ function Details(): JSX.Element {
     useEffect(() => {
         EmployeesService.get_employee(employeeID!)
             .then(e => setEmployee(e))
-            .catch(err => alert(err.message));
+            .catch(err => NotifyService.error(err.message));
     }, []);
 
     const navigation = useNavigate();
@@ -20,10 +21,10 @@ function Details(): JSX.Element {
     async function delete_employee() {
         try {
             await EmployeesService.delete_employee(employeeID!);
-            alert("Employee deleted");
+            NotifyService.success("Employee deleted");
             navigation("/employees");
         } catch (error: any) {
-            alert(error.message);
+            NotifyService.error(error.message);
         }
     }
 

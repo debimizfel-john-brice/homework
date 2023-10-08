@@ -12,7 +12,8 @@ function Aside(): JSX.Element {
                 <NavLink to="/reviews">Reviews</NavLink>
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="/employees">Employees</NavLink>
-                <a> <RandomBrand /></a>
+                <NavLink to="/categories">Categories</NavLink>
+                <a><RandomBrand /></a>
             </nav>
 
         </div>

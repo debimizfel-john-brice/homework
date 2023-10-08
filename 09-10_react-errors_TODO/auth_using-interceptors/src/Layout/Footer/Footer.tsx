@@ -1,9 +1,10 @@
 import './Footer.css';
 import TotalEmployees from '../../Components/TotalEmployees/TotalEmployees';
+import NotifyService from '../../Services/NotifyService';
 
 function Footer(): JSX.Element {
     function show_alert() {
-        alert("Deborah Mizarhi");
+        NotifyService.info("Deborah Mizarhi");
     }
 
 

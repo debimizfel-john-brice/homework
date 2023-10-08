@@ -11,6 +11,7 @@ import AddEmployee from '../AddEmployee-Forms/AddEmployee';
 import EditEmployee from '../EditEmployee/EditEmployee';
 import SignUp from '../SignUp/SignUp';
 import LogIn from '../LogIn/LogIn';
+import Categories from '../Categories/Categories';
 
 function Routing(): JSX.Element {
     return (
@@ -26,6 +27,8 @@ function Routing(): JSX.Element {
                 <Route path="/employees/details/:employeeID" element={<Details />} />
                 <Route path="/employees/add_employee" element={<AddEmployee />} />
                 <Route path="/employees/edit_employee/:employeeID" element={<EditEmployee />} />
+
+                <Route path="/categories" element={<Categories />} />
 
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/login" element={<LogIn />} />
