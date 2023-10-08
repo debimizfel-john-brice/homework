@@ -1,0 +1,12 @@
+{
+  "name": "deborah-arrays-operations",
+  "version": "1.3.0",
+  "description": "Perform different actions with arrays.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": ["arrays", "sum","max", "min", "avg"],
+  "author": "Deborah Mizrahi",
+  "license": "ISC"
+}

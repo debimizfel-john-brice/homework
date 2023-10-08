@@ -1,0 +1,40 @@
+.grid1 {
+    border: 2px solid black;
+    border-collapse: collapse;
+    display: grid;
+    grid-template-columns: 4fr 1fr 2fr 2fr;
+    margin: auto;
+    width: 700px;
+}
+
+.grid1 div {
+    border: 2px solid black;
+    height: 60px;
+}
+
+.grid1 div:nth-child(-n+4) {
+    background-color: rgb(181, 181, 181);
+}
+
+/* -------------------------------- */
+.grid2 {
+    border: 2px solid black;
+    border-collapse: collapse;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4fr 2fr 16fr 1fr;
+    margin: auto;
+    width: 700px;
+}
+
+.grid2 div {
+    background-color: beige;
+    border: 2px solid black;
+    min-height: 12px;
+}
+
+.grid2 div:first-child,
+.grid2 div:nth-child(n+5) {
+    background-color: rgb(181, 181, 181);
+    grid-column: span 3;
+}

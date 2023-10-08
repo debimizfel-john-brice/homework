@@ -1,0 +1,49 @@
+:root {
+    --main-color: rgb(111, 194, 92);
+}
+
+h1 {
+    color: var(--main-color);
+    text-align: center;
+}
+
+label {
+    color: rgb(182, 223, 172);
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+input {
+    background-color: rgb(242, 242, 242);
+    border: unset;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input+span {
+    color: red;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.my_button {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 80px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: white;
+    border-radius: 80px;
+    color: var(--main-color);
+}

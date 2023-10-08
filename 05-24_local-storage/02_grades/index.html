@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/question-2/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" />
+
+    <title>Grades</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1 class="col-4 offset-4 text-center my-4">Grades</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-4 offset-4 d-flex flex-column py-2">
+          <label>Fullname</label>
+          <input type="text" id="fullname_box" class="p-1" />
+          <span id="fullname_box_error"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 offset-4 d-flex flex-column py-2">
+          <label>Grade</label>
+          <input type="number" id="grade_box" class="p-1" />
+          <span id="grade_box_error"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 offset-4">
+          <button class="my_button" onclick="add_grade()">Add grade</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 offset-4 text-center p-4">
+          <span id="span_box"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 offset-4 mt-2">
+          <table>
+            <thead>
+              <tr>
+                <th>Fullname</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
+            <tbody id="table_body_box"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="/question-2/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Pet Store</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Pet store</h1>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/pets.html">Pets</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="content">
+      <h3>Contact us</h3>
+      <form class="form-grid">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" />
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" />
+
+        <label for="gender">Gender:</label>
+        <div>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+        <label for="cities">Select a city:</label>
+        <select id="cities" name="city">
+          <option value="">Select a city</option>
+          <option value="Jerusalem">Jerusalem</option>
+          <option value="Tel Aviv">Tel Aviv</option>
+          <option value="Haifa">Haifa</option>
+          <option value="Rishon LeZion">Rishon LeZion</option>
+          <option value="Petah Tikva">Petah Tikva</option>
+          <option value="Netanya">Netanya</option>
+          <option value="Ashdod">Ashdod</option>
+          <option value="Be'er Sheva">Be'er Sheva</option>
+          <option value="Holon">Holon</option>
+          <option value="Bnei Brak">Bnei Brak</option>
+          <option value="Ramat Gan">Ramat Gan</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <div class="buttons">
+          <input type="reset" value="Clear" />
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+    <div class="footer">&copy; Copyright Deborah Murciano 2023</div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>06_jquery-ajax</title>
+  </head>
+  <body>
+    <main class="container" id="container">
+      <select onchange="get_weather(this.value)">
+        <option selected disabled>Select a country</option>
+        <option value="Venezuela">Venezuela</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Canada">Canada</option>
+        <option value="United States">United States</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Australia">Australia</option>
+        <option value="Germany">Germany</option>
+        <option value="France">France</option>
+        <option value="Spain">Spain</option>
+        <option value="Italy">Italy</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Argentina">Argentina</option>
+        <option value="China">China</option>
+        <option value="Japan">Japan</option>
+        <option value="India">India</option>
+      </select>
+
+      <article>
+        <header><span id="temperature"></span></header>
+        <img id="icon" src="" />
+        <span id="description"></span>
+      </article>
+    </main>
+  </body>
+</html>

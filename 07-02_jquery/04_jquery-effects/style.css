@@ -1,0 +1,50 @@
+button {
+    border: none;
+    border-radius: 14px;
+    font-size: large;
+    padding: 9px 15px;
+    margin: 0px 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#blue_button {
+    background-color: blue;
+    color: white;
+}
+
+#red_button {
+    background-color: red;
+    color: white;
+}
+
+.grid {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 100vh;
+    justify-items: center;
+}
+
+.grid>div {
+    border: 1px solid black;
+    box-sizing: border-box;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    height: 150px;
+    padding-top: 65px;
+    text-align: center;
+    width: 150px;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}

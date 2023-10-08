@@ -1,0 +1,12 @@
+.EmployeeCard {
+    & a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    & .employeeCardImage {
+        float: right;
+        height: 100%;
+        width: 50%;
+    }
+}

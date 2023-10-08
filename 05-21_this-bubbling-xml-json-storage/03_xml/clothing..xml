@@ -1,0 +1,29 @@
+<clothing>
+    <clothe>
+        <code>1234</code>
+        <size>S</size>
+        <color>Black</color>
+        <price coin="$">100</price>
+    </clothe>
+    <clothe>
+        <code>4356</code>
+        <size>M</size>
+        <color>White</color>
+        <price coin="L">200</price>
+    </clothe>
+     <clothe>
+        <code>9487</code>
+        <size>L</size>
+        <color>Blue</color>
+        <price coin="E">300</price>
+    </clothe>
+     <clothe>
+        <code>2765</code>
+        <size>XL</size>
+        <color>Gray</color>
+        <price coin="$">400</price>
+    </clothe>
+</clothing>
+
+
+<!-- Answer from https://www.xmlvalidation.com: No errors were found  -->

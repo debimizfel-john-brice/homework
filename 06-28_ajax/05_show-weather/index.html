@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>05_show-weather</title>
+  </head>
+  <body>
+    <form class="content">
+      <h1>Search weather</h1>
+
+      <select id="cities_box" onchange="get_weather(this)">
+        <option value="Venenzuela">Venenzuela</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Canada">Canada</option>
+        <option value="United States">United States</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Australia">Australia</option>
+        <option value="Germany">Germany</option>
+        <option value="France">France</option>
+        <option value="Spain">Spain</option>
+        <option value="Italy">Italy</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Argentina">Argentina</option>
+        <option value="China">China</option>
+        <option value="Japan">Japan</option>
+        <option value="India">India</option>
+      </select>
+      <div id="div_weather"></div>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

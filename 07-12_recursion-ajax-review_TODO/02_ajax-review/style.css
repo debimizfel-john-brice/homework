@@ -1,0 +1,40 @@
+#load_users {
+    margin: 20px;
+}
+
+#ages,
+#genders,
+#nats {
+    margin-left: 20px;
+}
+
+hr {
+    margin-right: 20px;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#container>article {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+#container>article>header {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+
+    flex-grow: 1;
+}
+
+#container>article>img {
+    display: block;
+    margin: auto;
+}

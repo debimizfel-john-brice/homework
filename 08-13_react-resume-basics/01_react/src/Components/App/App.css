@@ -1,0 +1,16 @@
+.App {
+
+    height: 100%;
+
+
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+ }
+
+.main div{
+    height: 540px;
+    width: 50%;
+}

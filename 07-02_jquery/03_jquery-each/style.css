@@ -1,0 +1,27 @@
+button {
+    border: none;
+    border-radius: 14px;
+    display: block;
+    font-size: large;
+    margin: auto;
+    padding: 9px 15px;
+}
+
+.grid {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 100vh;
+    justify-items: center;
+}
+
+.grid>div {
+    border: 1px solid black;
+    height: 150px;
+    text-align: center;
+    width: 150px;
+    padding-top: 65px;
+    font-size: large;
+    font-weight: bold;
+    box-sizing: border-box;
+}

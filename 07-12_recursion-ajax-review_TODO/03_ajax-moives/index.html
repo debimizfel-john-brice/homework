@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://picocss.com/docs/js/modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>02_ajax-review</title>
+  </head>
+  <body>
+    <nav><h2 id="title">Movies</h2></nav>
+    <hr />
+
+    <main class="container-fluid" id="container"></main>
+
+    <dialog id="movie_description">
+      <article>
+        <a href="#close" aria-label="Close" class="close" data-target="movie_description" onClick="toggleModal(event)"> </a>
+        <h3 id="movie_title"></h3>
+        <img src="" id="backdrop_img" />
+        <p id="description"></p>
+      </article>
+    </dialog>
+  </body>
+</html>

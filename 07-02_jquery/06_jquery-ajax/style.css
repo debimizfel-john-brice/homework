@@ -1,0 +1,13 @@
+/* #cities {
+    max-width: 500px;
+    margin: auto;
+    display: block;
+} */
+
+#container {
+    max-width: 500px;
+}
+
+#icon {
+    margin-right: 10px;
+}

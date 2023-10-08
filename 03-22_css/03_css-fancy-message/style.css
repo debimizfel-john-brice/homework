@@ -1,0 +1,12 @@
+p {
+    background: linear-gradient(40deg, #fff000, black, red, blue);
+    ;
+    border-radius: 50px;
+    box-shadow: rgb(114, 113, 113) 10px 10px 10px;
+    color: white;
+    font-family: 'Water Brush', cursive;
+    font-size: 100px;
+    margin: 50px auto;
+    max-width: max-content;
+    padding: 40px 100px;
+}
