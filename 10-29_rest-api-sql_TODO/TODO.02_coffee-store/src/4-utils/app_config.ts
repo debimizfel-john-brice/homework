@@ -7,7 +7,7 @@ class AppConfig {
     static my_sql_host = "localhost";
 
     // Database name:
-    static my_sql_database = "northwind";
+    static my_sql_database = "coffee_shop";
 
     // Database user:
     static my_sql_user = "root";

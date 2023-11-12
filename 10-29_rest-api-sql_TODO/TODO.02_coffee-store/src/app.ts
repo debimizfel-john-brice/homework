@@ -1,6 +1,6 @@
 import express from "express";
 import AppConfig from "./4-utils/app_config";
-import productRouts from "./6-routes/product_route";
+import coffeeRoutes from "./6-routes/coffee_route";
 
 // Create server object
 const server = express();
@@ -9,7 +9,7 @@ const server = express();
 server.use(express.json());
 
 // Routs:
-server.use("/", productRouts)
+server.use("/", coffeeRoutes);
 
 // Run server
 server.listen(AppConfig.port, () => console.log(`Server is running on port ${AppConfig.port}`));
