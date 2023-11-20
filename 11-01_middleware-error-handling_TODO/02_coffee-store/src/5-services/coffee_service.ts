@@ -1,6 +1,7 @@
 import { OkPacket } from "mysql";
 import CoffeeModel from "../2-models/coffe_model";
 import dal from "../4-utils/dal";
+import { IdNotFound } from "../2-models/error_status";
 
 async function getCoffees(): Promise<CoffeeModel[]> {
     const sql = "SELECT * FROM coffees";
@@ -12,6 +13,7 @@ async function getCoffee(id: number): Promise<CoffeeModel> {
     const sql = `SELECT * FROM coffees WHERE coffeeId = ${id}`;
     const coffees = await dal.execute(sql);
     const coffee = coffees[0];
+    if (!coffee) throw new IdNotFound(id);
     return coffee;
 }
 
@@ -43,6 +45,7 @@ async function addCoffee(coffee: CoffeeModel): Promise<CoffeeModel> {
 async function updateCoffee(coffee: CoffeeModel): Promise<CoffeeModel> {
     const sql = `UPDATE coffees SET coffeeType = '${coffee.coffeeType}', price = ${coffee.price}, strength = ${coffee.strength} WHERE coffeeId = ${coffee.id}`;
     const info: OkPacket = await dal.execute(sql);
+    if (!info.affectedRows) throw new IdNotFound(coffee.id);
     return coffee;
 }
 
@@ -59,7 +62,8 @@ async function updatePartialCoffee(coffee: CoffeeModel): Promise<CoffeeModel> {
 
 async function deleteCoffee(id: number): Promise<void> {
     const sql = `DELETE FROM coffees WHERE coffeeId = ${id}`;
-    await dal.execute(sql);
+    const info = await dal.execute(sql);
+    if (!info.affectedRows) throw new IdNotFound(id);
 }
 
 export default {
