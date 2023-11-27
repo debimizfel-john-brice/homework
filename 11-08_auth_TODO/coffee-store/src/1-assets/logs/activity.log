@@ -97,3 +97,138 @@ Method: POST
 Route: /api/coffees/
 IP Adress: ::1
 --------------------------
+11/27/2023, 11:16:40 PM
+Method: GET
+Route: /api/coffees/
+IP Adress: ::1
+--------------------------
+11/27/2023, 11:18:21 PM
+Method: POST
+Route: /api/login/
+IP Adress: ::1
+--------------------------
+11/27/2023, 11:19:10 PM
+Method: POST
+Route: /api/login/
+IP Adress: ::1
+--------------------------
+11/27/2023, 11:19:41 PM
+Method: POST
+Route: /api/login/
+IP Adress: ::1
+--------------------------
+11/27/2023, 11:23:21 PM
+Method: POST
+Route: /api/login/
+IP Adress: ::1
+--------------------------
+11/27/2023, 11:24:01 PM
+Method: POST
+Route: /api/login/
+IP Adress: ::1
+--------------------------
+11/27/2023, 11:24:32 PM
+Method: POST
+Route: /api/login/
+IP Adress: ::1
+--------------------------
+11/27/2023, 11:30:39 PM
+Method: POST
+Route: /api/login/
+IP Adress: ::1
+--------------------------
+11/27/2023, 11:39:24 PM
+Method: POST
+Route: /api/login/
+IP Adress: ::1
+--------------------------
+11/27/2023, 11:39:53 PM
+Method: POST
+Route: /api/login/
+IP Adress: ::1
+--------------------------
+11/27/2023, 11:45:54 PM
+Method: POST
+Route: /api/login/
+IP Adress: ::1
+--------------------------
+11/28/2023, 12:17:04 AM
+Method: POST
+Route: /api/regitser/
+IP Adress: ::1
+--------------------------
+11/28/2023, 12:17:20 AM
+Method: POST
+Route: /api/register/
+IP Adress: ::1
+--------------------------
+11/28/2023, 12:27:27 AM
+Method: POST
+Route: /api/register/
+IP Adress: ::1
+--------------------------
+11/28/2023, 12:27:35 AM
+Method: POST
+Route: /api/register/
+IP Adress: ::1
+--------------------------
+11/28/2023, 12:54:39 AM
+Method: GET
+Route: /api/coffees/expensive/2
+IP Adress: ::1
+--------------------------
+11/28/2023, 12:55:12 AM
+Method: GET
+Route: /api/coffees/expensive/2
+IP Adress: ::1
+--------------------------
+11/28/2023, 1:11:04 AM
+Method: GET
+Route: /api/coffees/expensive/2
+IP Adress: ::1
+--------------------------
+11/28/2023, 1:11:13 AM
+Method: GET
+Route: /api/coffees/expensive/2
+IP Adress: ::1
+--------------------------
+11/28/2023, 1:24:52 AM
+Method: POST
+Route: /api/login/
+IP Adress: ::1
+--------------------------
+11/28/2023, 1:25:16 AM
+Method: POST
+Route: /api/coffees/
+IP Adress: ::1
+--------------------------
+11/28/2023, 1:25:31 AM
+Method: POST
+Route: /api/coffees/
+IP Adress: ::1
+--------------------------
+11/28/2023, 1:25:59 AM
+Method: POST
+Route: /api/coffees/
+IP Adress: ::1
+--------------------------
+11/28/2023, 1:26:14 AM
+Method: DELETE
+Route: /api/coffees/10
+IP Adress: ::1
+--------------------------
+11/28/2023, 1:26:56 AM
+Method: DELETE
+Route: /api/coffees/9
+IP Adress: ::1
+--------------------------
+11/28/2023, 1:27:41 AM
+Method: DELETE
+Route: /api/coffees/8
+IP Adress: ::1
+--------------------------
+11/28/2023, 1:28:32 AM
+Method: DELETE
+Route: /api/coffees/7
+IP Adress: ::1
+--------------------------

@@ -17,17 +17,20 @@ async function getCoffee(id: number): Promise<CoffeeModel> {
     return coffee;
 }
 
+
 async function getExpensiveCoffees(minPrice: number): Promise<CoffeeModel[]> {
     const sql = `SELECT * FROM coffees WHERE price > ${minPrice}`;
     const coffees = await dal.execute(sql);
     return coffees;
 }
 
+
 async function getCoffeesBetween(minPrice: number, maxPrice: number): Promise<CoffeeModel[]> {
     const sql = `SELECT * FROM coffees WHERE price BETWEEN ${minPrice} AND ${maxPrice}`;
     const coffees = await dal.execute(sql);
     return coffees;
 }
+
 
 async function getCoffeesByStrength(strength: number): Promise<CoffeeModel[]> {
     const sql = `SELECT * FROM coffees WHERE strength = ${strength}`;

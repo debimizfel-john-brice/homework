@@ -26,3 +26,9 @@ export class InvalidInput extends ErrorStatus {
         super(message, 400);
     }
 }
+
+export class UnauthorizedError extends ErrorStatus {
+    public constructor(message: string) {
+        super(message, 401);
+    }
+}

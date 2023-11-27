@@ -6,6 +6,7 @@ import useFilelog from "./3-middleware/use_filelog";
 import checkPrice from "./3-middleware/check_price";
 import { routeNotFound } from "./3-middleware/route_not_found";
 import { catchErrors } from "./3-middleware/catch_errors";
+import authRoutes from "./6-routes/auth_route";
 
 // Create server object
 const server = express();
@@ -19,6 +20,7 @@ server.post("/api/coffees", checkPrice);
 server.use(useFilelog);
 
 // Routs:
+server.use("/", authRoutes);
 server.use("/", coffeeRoutes);
 
 // Error handling

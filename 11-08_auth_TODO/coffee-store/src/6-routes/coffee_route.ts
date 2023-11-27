@@ -1,6 +1,8 @@
 import express, { NextFunction, Request, Response } from "express";
 import coffee_service from "../5-services/coffee_service";
 import Coffee from "../2-models/coffe_model";
+import verifyLoggedIn from "../3-middleware/verify_logged_in";
+import verifyAdmin from "../3-middleware/verify_admin";
 
 const router = express.Router();
 
@@ -25,7 +27,8 @@ router.get("/api/coffees/:id", async (req: Request, res: Response, next: NextFun
     }
 });
 
-router.get("/api/coffees/expensive/:minPrice", async (req: Request, res: Response, next: NextFunction) => {
+// * logged in only
+router.get("/api/coffees/expensive/:minPrice", verifyLoggedIn, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const minPrice = +req.params.minPrice;
         const coffees = await coffee_service.getExpensiveCoffees(minPrice);
@@ -36,7 +39,8 @@ router.get("/api/coffees/expensive/:minPrice", async (req: Request, res: Respons
     }
 });
 
-router.get("/api/coffees/between/:minPrice/:maxPrice", async (req: Request, res: Response, next: NextFunction) => {
+// * logged in only
+router.get("/api/coffees/between/:minPrice/:maxPrice", verifyLoggedIn, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const minPrice = +req.params.minPrice;
         const maxPrice = +req.params.maxPrice;
@@ -48,7 +52,8 @@ router.get("/api/coffees/between/:minPrice/:maxPrice", async (req: Request, res:
     }
 });
 
-router.get("/api/coffees/strength/:strength", async (req: Request, res: Response, next: NextFunction) => {
+// * logged in only
+router.get("/api/coffees/strength/:strength", verifyLoggedIn, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const strength = +req.params.strength;
         const coffees = await coffee_service.getCoffeesByStrength(strength);
@@ -59,7 +64,8 @@ router.get("/api/coffees/strength/:strength", async (req: Request, res: Response
     }
 });
 
-router.post("/api/coffees", async (req: Request, res: Response, next: NextFunction) => {
+// & Admin only
+router.post("/api/coffees", verifyAdmin, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const coffee = new Coffee(req.body);
         const newCoffee = await coffee_service.addCoffee(coffee);
@@ -70,7 +76,8 @@ router.post("/api/coffees", async (req: Request, res: Response, next: NextFuncti
     }
 });
 
-router.put("/api/coffees/:id", async (req: Request, res: Response, next: NextFunction) => {
+// & Admin only
+router.put("/api/coffees/:id", verifyAdmin, async (req: Request, res: Response, next: NextFunction) => {
     try {
         req.body.id = +req.params.id;
         const coffee = new Coffee(req.body);
@@ -81,7 +88,8 @@ router.put("/api/coffees/:id", async (req: Request, res: Response, next: NextFun
     }
 });
 
-router.patch("/api/coffees/:id", async (req: Request, res: Response, next: NextFunction) => {
+// & Admin only
+router.patch("/api/coffees/:id", verifyAdmin, async (req: Request, res: Response, next: NextFunction) => {
     try {
         req.body.id = +req.params.id;
         const coffee = new Coffee(req.body);
@@ -93,7 +101,8 @@ router.patch("/api/coffees/:id", async (req: Request, res: Response, next: NextF
     }
 });
 
-router.delete("/api/coffees/:id", async (req: Request, res: Response, next: NextFunction) => {
+// & Admin only
+router.delete("/api/coffees/:id", verifyAdmin, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const id = +req.params.id;
         await coffee_service.deleteCoffee(id);
