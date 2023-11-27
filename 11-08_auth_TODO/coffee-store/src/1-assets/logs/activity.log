@@ -1,0 +1,99 @@
+11/20/2023, 6:08:30 PM
+11/20/2023, 6:09:02 PM
+Method: PUT, Route: /api/coffees/3
+11/20/2023, 6:09:22 PM
+Method: PUT, Route: /api/coffees/3
+--------------------------
+11/20/2023, 6:12:51 PM
+Method: PUT, Route: /api/coffees/3, IP Adress: ::1
+--------------------------
+11/20/2023, 6:16:54 PM
+Method: Method: PUT
+ Route: Route: /api/coffees/3
+ IP Adress: IP Adress: ::1
+--------------------------
+11/20/2023, 6:17:40 PM
+Method: PUT
+Route: /api/coffees/3
+IP Adress: ::1
+--------------------------
+11/20/2023, 6:25:05 PM
+Method: POST
+Route: /api/coffees/
+IP Adress: ::1
+--------------------------
+11/20/2023, 6:25:57 PM
+Method: POST
+Route: /api/coffees/
+IP Adress: ::1
+--------------------------
+11/20/2023, 6:58:26 PM
+Method: POST
+Route: /api/coffee/
+IP Adress: ::1
+--------------------------
+11/20/2023, 6:58:35 PM
+Method: POST
+Route: /api/coffees/
+IP Adress: ::1
+--------------------------
+11/20/2023, 6:58:44 PM
+Method: PUT
+Route: /api/coffees/30
+IP Adress: ::1
+--------------------------
+11/20/2023, 6:59:04 PM
+Method: GET
+Route: /api/coffees/
+IP Adress: ::1
+--------------------------
+11/20/2023, 6:59:16 PM
+Method: PUT
+Route: /api/coffees/30
+IP Adress: ::1
+--------------------------
+11/20/2023, 7:01:43 PM
+Method: PUT
+Route: /api/coffees/30
+IP Adress: ::1
+--------------------------
+11/20/2023, 7:05:18 PM
+Method: GET
+Route: /api/coffees/20
+IP Adress: ::1
+--------------------------
+11/20/2023, 7:07:28 PM
+Method: GET
+Route: /api/coffees/20
+IP Adress: ::1
+--------------------------
+11/20/2023, 7:11:07 PM
+Method: PUT
+Route: /api/coffees/30
+IP Adress: ::1
+--------------------------
+11/20/2023, 7:13:18 PM
+Method: DELETE
+Route: /api/coffees/4
+IP Adress: ::1
+--------------------------
+11/20/2023, 7:13:29 PM
+Method: DELETE
+Route: /api/coffees/1
+IP Adress: ::1
+--------------------------
+11/20/2023, 7:13:38 PM
+Method: GET
+Route: /api/coffees/
+IP Adress: ::1
+--------------------------
+11/20/2023, 7:13:57 PM
+Method: DELETE
+Route: /api/coffees/70
+IP Adress: ::1
+--------------------------
+11/20/2023, 7:14:16 PM
+Method: POST
+Route: /api/coffees/
+IP Adress: ::1
+--------------------------
