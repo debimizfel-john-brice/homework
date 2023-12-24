@@ -1,0 +1,151 @@
+
+// Nesting:
+p{
+
+    span{
+        color: red;
+    }
+
+    > span{
+        font-size: xx-large;
+    }
+
+    a{
+        span{
+            color: green;
+        }
+    }
+
+}
+
+// Extend:
+th{
+    padding: 5px;
+    background-color: yellow;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+td{
+    @extend th;
+    font-size: x-large;
+    background-color: greenyellow;
+}
+
+
+// Variables:
+$background: lightgreen;
+$width: 300px;
+
+input[type=text]{
+    width: $width;
+    background-color: $background;
+}
+textarea{
+    width: $width;
+    background-color: $background;
+    height: 100px;
+}
+
+
+// Operators:
+$thikness: 1px;
+
+input[type=url]{
+    border: $thikness solid gold;
+}
+
+input[type=tel]{
+    border: $thikness * 2  solid gold;
+}
+
+// Mixin:
+@mixin ad-box{
+    border: 1px solid lightpink;
+    padding: 10px;
+    border-radius: 5px;
+    width: 400px;
+    box-shadow: 10px 10px 10px lightcoral;
+    text-align: center;
+}
+
+@mixin colorful-box( $color1: red, $color2: green, $color3: blue ){
+    background: linear-gradient(45deg, $color1, $color2, $color3);
+}
+
+.paid-ad{
+    color: magenta;
+    @include ad-box();
+    @include colorful-box(black, gray, white);
+}
+
+.free-ad{
+    color: sandybrown;
+    @include ad-box();
+    @include colorful-box();
+}
+
+
+// Functions:  500 * 1.1 =
+@function enlarge($value, $percent){
+    @return $value * ( 1 + ($percent / 100));
+}
+
+.funny{
+    font-size: enlarge(20px,10);
+}
+
+.cute{
+    font-size: enlarge(20px,50);
+}
+
+
+// If-Else:
+$n: random(100);
+$backgroundColor: red;
+
+@if($n < 50){
+    $backgroundColor: magenta;
+}
+@else{
+    $backgroundColor: blue;
+}
+
+input[type=email]{
+    background-color: $backgroundColor;
+}
+
+
+// For:
+// @for $i from 1 through 4 { // for(let i = 1, i <= 4; i++)
+@for $i from 1 to 4 { // for(let i = 1, i < 4; i++)
+    h5:nth-of-type(#{$i}){
+        font-size: $i * 10px;
+    }
+}
+
+
+// Each:
+
+@mixin images($size: 80px){
+    width: $size;
+    height: $size;
+    border: 1px solid gray;
+    margin: 5px;
+}
+
+$animales: bunny kitten puppy;
+@each $item in $animales{
+    .#{$item}-image{
+        @include images();
+        background-image: url(assets/images/#{$item}.jpg)
+    }
+}
+
+// Homework:
+@for $i from 1 to 10{
+    .flowers div:nth-child(#{$i}){
+       @include images(200px);
+        background-image: url(assets/images/#{$i}.jpg);
+    }
+}

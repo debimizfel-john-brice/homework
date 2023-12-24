@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "1251bb0b-d2f3-4944-85bb-b556c550b759",
+		"name": "Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6848587"
+	},
+	"item": [
+		{
+			"name": "Get All Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products By Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/products-by-category/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products-by-category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"לחמניה\",\r\n    \"productionTime\": \"2023-11-29 15:47:08\",\r\n    \"expiryTime\": \"2023-11-30T15:47:08.000Z\",\r\n    \"categoryId\": 1,\r\n    \"price\": 1.9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"לחמניה\",\r\n    \"productionTime\": \"2023-11-29 15:47:08\",\r\n    \"expiryTime\": \"2023-11-30T15:47:08.000Z\",\r\n    \"categoryId\": 1,\r\n    \"price\": 1.9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/products/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
