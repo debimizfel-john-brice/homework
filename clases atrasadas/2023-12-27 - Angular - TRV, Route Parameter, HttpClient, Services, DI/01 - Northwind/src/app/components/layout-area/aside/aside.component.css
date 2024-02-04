@@ -1,0 +1,15 @@
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+a{
+    font-size: x-large;
+}
+
+
+.active-link{
+    font-weight: bold;
+    color: black;
+}

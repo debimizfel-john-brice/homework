@@ -1,0 +1,31 @@
+@if(events){
+<table role="grid">
+  <thead>
+    <tr>
+      <th scope="col">Event type</th>
+      <th scope="col">Date and time</th>
+      <th scope="col">Description</th>
+      <th scope="col">Address</th>
+      <th scope="col">Participants</th>
+      <th scope="col">Is passed</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (e of events; track e._id) {
+    <tr>
+      <td>{{e.eventType.eventName}}</td>
+      <td>{{e.date | date:"d/M/Y HH:mm"}}</td>
+      <td>{{e.description}}</td>
+      <td>{{e.address}}</td>
+      <td>{{e.participants}}</td>
+      @if (isPassed(e.date)){
+      <td>Yes</td>
+      } @else {
+      <td>No</td>
+      }
+      <td><button (click)="deleteEvent(e._id)">Delete</button></td>
+    </tr>
+    }
+</table>
+}

@@ -1,0 +1,28 @@
+<form ngNativeValidate (ngSubmit)="save()">
+
+    <label>
+        <span>Name:</span>
+        <input type="text" name="name" [(ngModel)]="book.name" required minlength="2" maxlength="30">
+    </label>
+
+    <label>
+        <span>Author:</span>
+        <select name="author" [(ngModel)]="book.author" required>
+            <option selected disabled>Please Select...</option>
+            <option *ngFor="let a of authors" [value]="a.id">{{a.firstName + " " + a.lastName}}</option>
+        </select>
+    </label>
+    
+    <label>
+        <span>Pages:</span>
+        <input type="number" name="pages" [(ngModel)]="book.pages" required min="5" max="1000">
+    </label>
+    
+    <label>
+        <span>Price:</span>
+        <input inputmode="numeric" step="0.1" name="price" [(ngModel)]="book.price" required min="0" max="1000">
+    </label>
+
+    <button>Save</button>
+
+</form>

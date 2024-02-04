@@ -1,0 +1,12 @@
+.Layout {
+	height: 100%;
+    display: grid;
+    grid-template-rows: 20%;
+    background: linear-gradient(45deg, #cef3ff, #b8b8b8)
+}
+
+.Layout main{
+    padding: 20px;
+}
+
+

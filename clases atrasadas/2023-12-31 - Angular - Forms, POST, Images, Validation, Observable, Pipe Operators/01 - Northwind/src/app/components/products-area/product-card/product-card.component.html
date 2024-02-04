@@ -1,0 +1,14 @@
+<div class="box">
+
+    <div>
+        <span><b>Name:  </b> {{ product.name }}</span>
+        <span><b>Price: </b> {{ product.price | currency }}</span>
+        <span><b>Stock: </b> {{ product.stock }}</span>
+    </div>
+
+    <a routerLink="/products/{{product.id}}">
+        <!-- <img [ngSrc]="product.imageUrl" width="80" height="80"> -->
+        <img [src]="product.imageUrl">
+    </a>
+
+</div>

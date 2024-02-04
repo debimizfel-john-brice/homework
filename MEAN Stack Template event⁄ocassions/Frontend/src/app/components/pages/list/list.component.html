@@ -1,0 +1,9 @@
+<div>
+  <select (change)="getEventsByType($event.target)">
+    <option value="" disabled selected>Select</option>
+    @for (e of eventsTypes ; track e._id) {
+    <option value="{{e._id}}">{{e.eventName}}</option>
+    }
+  </select>
+  <app-table [events]="events" [deleteEvent]="deleteEvent.bind(this)"/>
+</div>

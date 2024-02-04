@@ -1,0 +1,31 @@
+<article>
+    <h4>Add Event</h4>
+    <form (ngSubmit)="addEvent()" ngNativeValidate>
+        <label>Event type</label>
+        <select name="eventTypeId" (change)="changeEventType($event.target)" required>
+            <option value="" disabled selected>Select</option>
+            @for (e of eventsTypes ; track e._id) {
+            <option value="{{e._id}}">{{e.eventName}}</option>
+            }
+        </select>
+        <label>
+            Date
+            <input type="datetime-local" name="date" [(ngModel)]="event.date" required>
+        </label>
+        <div class="grid">
+            <label>
+                Address
+                <input type="text" name="address" placeholder="Address" [(ngModel)]="event.address" required>
+            </label>
+            <label>
+                Participants
+                <input type="number" name="participants" placeholder="Participants" [(ngModel)]="event.participants" required>
+            </label>
+        </div>
+        <label>
+            Description
+            <textarea name="description" placeholder="Description" [(ngModel)]="event.description" required></textarea>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+</article>

@@ -20,7 +20,6 @@ function hashPassword(password: string): string {
     const salt = "Ipsum aute qui ipsum cillum.";
     const hash = crypto.createHmac("sha512", salt).update(password).digest("hex");
     return hash;
-
 }
 
 export default {

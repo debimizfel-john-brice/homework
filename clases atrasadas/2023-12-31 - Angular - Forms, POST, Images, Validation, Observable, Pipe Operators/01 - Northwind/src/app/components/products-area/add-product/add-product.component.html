@@ -1,0 +1,33 @@
+<form class="box" (ngSubmit)="send()" ngNativeValidate>
+
+    <!-- 2. Add Validation -->
+    <!-- Name: requierd, min: 2, max: 20 -->
+    <!-- Price: requierd, min: 1, max: 1000 -->
+    <!-- Stock: requierd, min: 1, max: 10000 -->
+    
+    <h2>Add Product</h2>
+
+    <label>
+        <span>Name:</span>
+        <input type="text" name="name" [(ngModel)]="product.name" required minlength="2" maxlength="20" />
+    </label>
+
+    <label>
+        <span>Price:</span>
+        <input type="number" name="price" [(ngModel)]="product.price" required min="1" max="1000" />
+    </label>
+    
+    <label>
+        <span>Stock:</span>
+        <input type="number" name="stock" [(ngModel)]="product.stock" required min="1" max="10000" />
+    </label>
+   
+    <label>
+        <span>Image:</span>
+        <input type="file" accept="image/*" #imageBoxRef />
+    </label>
+
+    <button>Save</button>
+
+
+</form>

@@ -1,0 +1,38 @@
+<form (ngSubmit)="save()" ngNativeValidate>
+    <h2>Add order</h2>
+    <label>
+        <span>Name:</span>
+        <input required="" type="text" name="name" [(ngModel)]="order.customerName">
+    </label>
+
+    <label>
+        <span>Phone:</span>
+        <input required pattern="^05\d-?\d{7}$" title="Phone format: 05X-XXXXXXX" type="text" name="phone"
+            [(ngModel)]="order.phone">
+    </label>
+
+    <label>
+        <span>Pizza type:</span>
+        <select #pizzaType name="pizzaType" [(ngModel)]="order.pizzaType">
+            <option selected>Select a type</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+    </label>
+
+    @if (pizzaType.value === "medium" || pizzaType.value === "large") {
+    <label>
+        <span>Souce:</span>
+        <input required="" type="text" name="souce" [(ngModel)]="order.souce">
+    </label>
+    }
+
+    @if (pizzaType.value === "large") {
+    <label>
+        <span>Drink:</span>
+        <input required="" type="text" name="drink" [(ngModel)]="order.drink">
+    </label>
+    }
+    <button>Save order</button>
+</form>

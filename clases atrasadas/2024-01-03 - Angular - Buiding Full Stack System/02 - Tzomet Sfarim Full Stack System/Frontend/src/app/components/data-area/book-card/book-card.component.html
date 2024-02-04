@@ -1,0 +1,14 @@
+<div class="box">
+
+    <span><b>Name:</b> {{ book.name }}</span>
+    
+    <span><b>Author:</b> {{ book.authorName }}</span>
+    
+    <span><b>Pages:</b> {{ book.pages }}</span>
+    
+    <span><b>Price:</b> {{ book.price | currency }}</span>
+
+    <span class="delete" (click)="delBook()">❌</span>
+
+
+</div>

@@ -1,0 +1,10 @@
+<div class="box">
+    <h2>Generator</h2>
+    <button (click)="start()">Start</button>
+    <button (click)="stop()" [disabled]="!subscription">Stop</button>
+    <hr>
+
+    @for(n of numbersArr; track n){
+        <span>{{n}} | </span>
+    }
+</div>

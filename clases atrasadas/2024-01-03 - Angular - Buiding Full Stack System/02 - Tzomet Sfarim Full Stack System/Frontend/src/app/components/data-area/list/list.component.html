@@ -1,0 +1,22 @@
+<form (ngSubmit)="search()" ngNativeValidate>
+
+    <label>
+        <span>Search For Books:</span>
+        <input required type="search" name="searchText" [(ngModel)]="searchText">
+    </label>
+
+    <button>Search 🔎</button>
+
+</form>
+
+<div class="books-list">
+
+    @for(b of books; track b.id){
+        <app-book-card [book]="b" (deleteMe)="deleteBook($event)"/>
+    }
+    
+    @if( books?.length === 0 ){
+        <h3>לא נמצאו תוצאות לחיפוש: {{ searchText }}</h3>
+    }
+
+</div>

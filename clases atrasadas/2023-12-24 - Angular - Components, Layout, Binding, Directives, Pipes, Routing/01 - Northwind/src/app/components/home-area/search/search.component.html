@@ -1,0 +1,19 @@
+<div class="box">
+
+    <h3>Hello! Please Search something...</h3>
+    
+    <!-- Property Binding -->
+    <label [title]="titleText">Search</label>
+    <br>
+
+    <!-- Two Way Binding -->
+    <input type="search" [(ngModel)]="textToSerach">
+    
+    <!-- Event Binding -->
+    <button (click)="search()">🔎</button>
+    <br>
+
+    <!-- Interpolation  -->
+    <span>You Searched for: {{ textToSerach }} </span>
+
+</div>

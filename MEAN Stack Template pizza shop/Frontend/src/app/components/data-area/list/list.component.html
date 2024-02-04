@@ -1,0 +1,42 @@
+<div>
+    <form class="search_box" (ngSubmit)="search()" ngNativeValidate>
+        <label>Phone:</label>
+        <input required pattern="^05\d-?\d{7}$" title="Phone format: 0xx-xxxxxxx" type="search"
+            placeholder="050-3456789" name="phone" [(ngModel)]="phoneToSearch" />
+        <button>🔍</button>[]
+    </form>
+
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Pizza type</th>
+                    <th>Souce</th>
+                    <th>Drink</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (o of orders; track o._id) {
+                    <tr>
+                        <td>{{o.dateTime | date:"short"}}</td>
+                        <td>{{o.customerName}}</td>
+                        <td>{{o.phone}}</td>
+                        <td>{{o.pizzaType}}</td>
+                        <td>{{o.souce}}</td>
+                        <td>{{o.drink}}</td>
+                    </tr>
+                }
+                <!-- <tr *ngFor="let order of orders">
+                    <td>{{order.date}}</td>
+                    <td>{{order.name}}</td>
+                    <td>{{order.phone}}</td>
+                    <td>{{order.pizzaType}}</td>
+                    <td>{{order.souce}}</td>
+                    <td>{{order.drink}}</td>
+                </tr> -->
+        </table>
+    </section>
+</div>

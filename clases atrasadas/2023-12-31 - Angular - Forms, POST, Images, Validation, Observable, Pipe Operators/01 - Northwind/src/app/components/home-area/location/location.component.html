@@ -1,0 +1,26 @@
+<div class="box">
+
+
+    <label>Select location:</label>
+
+    <br>
+
+    <!-- Second way -->
+    <select (change)="display(myLocation)" #myLocation>
+        <option>Jerusalem</option>
+        <option>Tel-Aviv</option>
+        <option>Haifa</option>
+        <option>Ashkelon</option>
+    </select>
+
+    <br>
+
+    <!-- First way -->
+    <span>My location: {{ myLocation.value }}</span>
+
+    <br>
+
+    <button (click)="show()" >🗺</button>
+
+
+</div>

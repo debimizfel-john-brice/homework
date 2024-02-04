@@ -1,0 +1,11 @@
+form{
+    max-width: 350px;
+    display: felx;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 50px auto;
+    background-color: white;
+}

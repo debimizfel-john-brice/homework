@@ -1,0 +1,18 @@
+.box{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.box > div{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid salmon;
+    object-fit: cover;
+}

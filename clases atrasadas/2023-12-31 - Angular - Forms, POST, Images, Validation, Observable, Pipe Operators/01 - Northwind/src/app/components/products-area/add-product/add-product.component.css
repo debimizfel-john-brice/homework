@@ -1,0 +1,38 @@
+.box{
+    width: 350px;
+    margin: auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.ng-touched.ng-invalid:not(form){
+    border-color: red;
+}

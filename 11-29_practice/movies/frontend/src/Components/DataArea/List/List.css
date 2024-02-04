@@ -1,0 +1,14 @@
+.List select {
+	direction: rtl;
+	margin: auto;
+	max-width: 850px;
+	text-align: center;
+}
+
+
+.List select {
+	/* border-radius: 50px; */
+	font-size: large;
+	/* padding: 10px; */
+
+}
